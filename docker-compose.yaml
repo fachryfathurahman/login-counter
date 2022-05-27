@@ -4,6 +4,33 @@ services:
     build:
       context: .
       dockerfile: ./AlphaClient/Dockerfile
-    image: alphaclient
+    image: alphaclients
     ports:
       - "2022:22"
+      - "8080:80"
+    networks:
+      - my-networks
+
+  nodeXYZ:
+    build:
+      context: .
+      dockerfile: ./AlphaClient/Dockerfile
+    image: alphaclients
+    ports:
+      - "2023:22"
+      - "8081:80"
+    networks:
+      - my-networks
+
+  nodeServer:
+    build:
+      context: .
+      dockerfile: ./AlphaServer/Dockerfile
+    image: alphaserver
+    ports:
+      - "2024:22"
+    networks:
+      - my-networks
+
+networks:
+  my-networks:
