@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  nodeABC:
+    build:
+      context: .
+      dockerfile: ./AlphaClient/Dockerfile
+    image: alphaclient
+    ports:
+      - "2022:22"
