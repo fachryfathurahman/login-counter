@@ -59,7 +59,7 @@ you can login to AlphaServer with two ways, first with `exec` command:
 docker exec -it <YOUR CONTAINER ID> bash
 ```
 ```sh
-docker exec -it login-counter-nodeXYZ-1 bash
+docker exec -it login-counter-nodeServer-1 bash
 ```
 
 
